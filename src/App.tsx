@@ -7,7 +7,7 @@ const App = () => (
   <div className="bg-black absolute inset-0">
     <Header />
     <FileUpload />
-    <Snowfall />
+    <Snowfall snowflakeCount={300} radius={[2,5]} wind={[1, 3]} />
   </div>
 );
 
