@@ -21,9 +21,7 @@ const FileUpload = () => {
           const worksheet = workbook.Sheets[sheetName];
           const jsonData = XLSX.utils.sheet_to_json(worksheet);
 
-          const [participants, newAssignments] = generateAssignments(
-            jsonData as any[]
-          );
+          const [, newAssignments] = generateAssignments(jsonData as any[]); // Only destructure the needed value
           setAssignments(newAssignments);
           setError("");
           setIsModalOpen(true);
